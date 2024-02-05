@@ -1,0 +1,96 @@
+<!-- Sathruwan Hansith - 2/3/2024 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .DisplayResult {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            flex-direction: column;
+            height: 100%;
+            background-color: black;
+        }
+        button {
+            background-color: white;
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 15px 50px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 800;
+            margin-top: 50px;
+            border-radius: 10px;
+            size: 50px;
+            font-family: monospace;
+            width: auto;
+        }
+          /* Media query for screens with a width of 600 pixels or less (mobile) */
+          @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 30px !important;
+                text-align: center;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="DisplayResult">
+        <h1 style="color: white; font-family: monospace; font-size: 50px; margin: 0;" id="ageDisplay"></h1>
+        <button onclick="tryAgain()">Try again</button>
+    </div>
+    <script>
+
+        function tryAgain(){
+            window.location.href = "DateSelector.html";
+
+        }
+        
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+    
+        function getCurrentTime() {
+            return new Date(); // Return the current date and time
+        }
+    
+        const birthday = getQueryParam('birthday');
+    
+        if (birthday) {
+            var selectedDate = new Date(birthday);
+            var currentTime = getCurrentTime();
+
+            var millisecs = currentTime - selectedDate;
+            var seconds = Math.floor(millisecs / 1000);
+            var minutes = Math.floor(seconds / 60);
+            var hours = Math.floor(minutes / 60);
+            var days = Math.floor(hours / 24);
+            var age = "You are " + days + " days, " + hours % 24 + " hours, " + minutes % 60 + " minutes, " + seconds % 60 + " seconds old.";
+
+            if (millisecs < 1){
+                var text = 'Select a proper birthday motherfucker'
+                document.getElementById('ageDisplay').innerText = text;
+            }else{
+                document.getElementById('ageDisplay').innerText = age;
+            }
+
+
+        }
+    </script>
+</body>
+</html>

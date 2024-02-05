@@ -1,0 +1,86 @@
+<!-- Sathruwan Hansith - 2/3/2024 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap">
+        <style>
+        body, html {
+            margin: 0;
+            height: 100%;
+        }
+
+        .hidden {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .visible {
+            opacity: 1;
+            transition: 0.5s;
+        }
+
+        .birthdayCalculator {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .DateSelector {
+            height: 50px;
+            width: 250px;
+            text-align: center;
+            font-size: 25px;
+            font-family: monospace;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: white;
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 15px 50px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 800;
+            margin-top: 30px;
+            border-radius: 10px;
+            size: 50px;
+            font-family: monospace;
+            width: auto;
+        }
+          /* Media query for screens with a width of 600 pixels or less (mobile) */
+          @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 35px !important;
+                text-align: center;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="birthdayCalculator">
+            <h1 style="color: white; font-family: monospace; font-size: 60px; margin: 0;">
+                Enter your birthday
+            </h1>
+            <input class="DateSelector" type="date" id="birthdayDateSelector" style="margin-top: 25px;">
+            <button onclick="getDate()">Submit</button>
+        </div>
+        <script>
+            function getDate(){
+                var getDate = document.getElementById('birthdayDateSelector').value;
+                window.location.href = "ResultDisplay.html?birthday=" + encodeURIComponent(getDate);
+
+            }
+        </script>
+    </body>
+</html>
