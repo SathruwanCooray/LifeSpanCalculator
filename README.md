@@ -1,9 +1,18 @@
 # Life-Span-Calculator
 
-This project is made as a fun side project to calculate the life span of a individual.
+This project is a fun side project developed to calculate the life span of an individual.
 
-check out the website here: https://sathruwancooray.github.io/Life_Span_Calculator/
+Check out the website here: [Life Span Calculator](https://sathruwancooray.github.io/Life_Span_Calculator/)
 
-Used Languages: HTML,JS,CSS
+## Technologies Used
 
-Lastest update: 2/5/2024 - Compatibility with mobile
+- HTML
+- JavaScript
+- CSS
+
+## Latest Update
+
+- **Date:** 2/5/2024
+- **Update:** Compatibility with mobile devices
+
+This project utilizes HTML, JavaScript, and CSS to provide a life span calculator tool. The latest update includes improvements for compatibility with mobile devices.
