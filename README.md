@@ -4,6 +4,10 @@ This project is a fun side project developed to calculate the life span of an in
 
 Check out the website here: [Life Span Calculator](https://sathruwancooray.github.io/Life_Span_Calculator_Website/)
 
+## Video Demonstration
+
+https://github.com/SathruwanCooray/Life_Span_Calculator_Website/assets/150252729/11664acc-e71c-4183-bb12-f308ba85c933
+
 ## Technologies Used
 
 - HTML
