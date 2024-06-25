@@ -2,7 +2,7 @@
 
 This project is a fun side project developed to calculate the life span of an individual.
 
-Check out the website here: [Life Span Calculator](https://sathruwancooray.github.io/LifeSpanCalculator/)
+Check out the website here: [Life Span Calculator](https://sathruwancooray.github.io/Life_Span_Calculator_Website/)
 
 ## Technologies Used
 
